@@ -16,7 +16,7 @@ match priority:
     case "medium":
         reminder += " that should be done soon"
     case "low":
-        reminder += " that can be done at your convenience"
+        reminder += ". Consider completing it when you have free time."
     case _:
         reminder = "Invalid priority level entered. Please enter high, medium, or low."
 
