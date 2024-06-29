@@ -18,13 +18,15 @@ match priority:
     case "low":
         reminder += ". Consider completing it"
     case _:
-        reminder = "Invalid priority level entered. Please enter high, medium, or low."
+        reminder = "Invalid priority level entered. Please enter high, medium, or low"
 
 # Modify the reminder if the task is time-bound
 if time_bound == "yes":
     reminder += " today!"
-else:
+elif time_bound == "no":
     reminder += " when you have free time."
+else:
+    reminder += "."
 
 # Print the customized reminder
 print(reminder)
