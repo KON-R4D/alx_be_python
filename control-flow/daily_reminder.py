@@ -16,13 +16,15 @@ match priority:
     case "medium":
         reminder += " that should be done soon"
     case "low":
-        reminder += ". Consider completing it when you have free time."
+        reminder += ". Consider completing it"
     case _:
         reminder = "Invalid priority level entered. Please enter high, medium, or low."
 
 # Modify the reminder if the task is time-bound
 if time_bound == "yes":
     reminder += " today!"
+else:
+    reminder += " when you have free time."
 
 # Print the customized reminder
 print(reminder)
